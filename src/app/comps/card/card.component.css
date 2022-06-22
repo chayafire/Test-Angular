@@ -1,0 +1,26 @@
+.card {
+    margin: 10px;
+    box-shadow: 0 0 18px 0 rgb(0 0 0 / 12%);
+    text-align: center;
+    padding: 10px;
+    width: 18rem;
+    align-items: center;
+
+}
+
+.card img{
+    height:  90px;
+    width: 80px;
+}
+
+.row{
+    align-items: center
+}
+
+.card-body{
+    height: 15rem;
+}
+.main-text{
+   text-align:right;
+   font-size: 0.9rem;
+}

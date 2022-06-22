@@ -1,0 +1,39 @@
+<div class="container">
+    <h5> {{sensros.length}} התקנים רשומים ({{counterOk}} תקנים {{counterNotOk}} בתקלה)</h5>
+    <div class="row">
+        <div *ngFor="let item of sensros" class="card col-3">
+            <img src='assets/sensors/{{item.Picture}}.png' class="card-img-top" alt={{item.WebSiteDeviceName}}>
+            <div class="card-body">
+                <p class="card-text">{{item.WebSiteDeviceName}}</p>
+
+                <h5 class="card-title">{{item.WebSiteDeviceName}}</h5>
+
+                <i (click)="changeStatus(item)" [style.color]="item.ComponentOk==0 ? 'red' : 'green'"
+                    class="fa fa-circle"></i>
+
+                <div class="main-text">
+
+
+                    <div class="row ">
+                        <div class="col-6">
+                            <span>תאריך התקנה:</span>
+                        </div>
+                        <div class="col-6">
+                            <strong> {{item.InstallDate | date :'dd.MM.yyyy'}}</strong>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between">
+                        <div class="col-6">
+                            <span>דיווח אחרון:</span>
+                        </div>
+                        <div class="col-6">
+                            <strong> {{item.LastReportDate | date :'dd.MM.yy'}}</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
